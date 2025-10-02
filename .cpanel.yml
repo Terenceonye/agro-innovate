@@ -1,0 +1,7 @@
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/agroinnovate/peace-agro-innovate
+    - /bin/rm -rf $DEPLOYPATH/*
+    - /bin/cp -R * $DEPLOYPATH
+    - cd $DEPLOYPATH && npm install --production
+    - touch $DEPLOYPATH/tmp/restart.txt
